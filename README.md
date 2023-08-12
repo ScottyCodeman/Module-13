@@ -18,6 +18,27 @@
   ![model1](Resources/model1.jpg)
   * Compiled the model using `binary_crossentropy` as the loss function, `adam` as the optimizer and `accuracy` as the evaluation metric
   * Fit the model using the scaled X_train and the y train and ran at 50 epochs
-  * `268/268 - 0s - loss: 0.5558 - accuracy: 0.7272 - 438ms/epoch - 2ms/step
+  * `Original Model Results 268/268 - 0s - loss: 0.5558 - accuracy: 0.7272 - 438ms/epoch - 2ms/step
     Loss: 0.5558086633682251, Accuracy: 0.7272303104400635`
   * saved the model as HDF5 file and named it [`Alphabetsoup.h5`](https://github.com/ScottyCodeman/Module-13/blob/a037bca9e96ba08fcd3ee03f22fdedad2cd5d464/Resources/AlphabetSoup.h5)
+# Step 3: Optimize the model
+* Keeping the number features and the output layer the same. The Alternative Model 1 was started with the attempt to increase the layers and the nodes at each layer, thus increaseing the params
+
+   ![model2](Resources/model2.jpg)
+* Fit the model using the same data and ran this at 50 epochs aswell
+* `Alternative Model 1 Results
+268/268 - 1s - loss: 0.5547 - accuracy: 0.7287 - 1s/epoch - 5ms/step
+Loss: 0.5547082424163818, Accuracy: 0.7287463545799255`
+
+* Alternative model 2 i decided to keep things a little more simple, less layers and increased the batch size to 250 from the default
+
+    ![model3](Resources/model3.jpg)
+
+*`Alternative Model 2 Results
+268/268 - 0s - loss: 0.5567 - accuracy: 0.7317 - 491ms/epoch - 2ms/step
+Loss: 0.5566757917404175, Accuracy: 0.7316617965698242`
+
+* saved both of the models as HDF5 file:
+*  Alternative model 1[`AlphabetSoup_A1.h5`](https://github.com/ScottyCodeman/Module-13/blob/c4fc30cc210be9262581530256ea2cd64859ef21/Resources/AlphabetSoup_A1.h5)
+*  Alternative model 2[`AlphabetSoup_A2.h5`](https://github.com/ScottyCodeman/Module-13/blob/c4fc30cc210be9262581530256ea2cd64859ef21/Resources/AlphabetSoup_A2.h5)
+  
